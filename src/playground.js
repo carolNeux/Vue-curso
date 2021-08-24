@@ -92,90 +92,98 @@
 // }
 
 //****************    OBJECTS     ****************/
-export  default function() {
+
+
+export default function() {
+//   const person = {
+//     firstName: 'Filip',
+//     lastName: 'Jerga',
+//     age: 28,
+//     printUserInfo() {
+//       console.log(`Hello ${this.firstName} ${this.lastName} of age: ${this.age}`)
+//     },
+//     printSomething(callback) {
+//       callback()
+//     },
+//     helpers: {
+//       helperVar: "testin variable",
+//       helperFunc: function() {
+//         console.log(this.helperVar)
+//       }
+//     }
+//   }
+//   console.log(person.firstName)
+
+//   class Person {
+//     firstName = ''
+//     lastName = ''
+//     age
+//     helpers = {
+//       helperVar: "testin variable",
+//       helperFunc: function() {
+//         console.log(this.helperVar)
+//       }
+//     }
+//     return(Person)
+//   /***************************************Diferentes maneras de escribir lo mismo */
+//   // constructor (firstName,lastName, age=0){
+//   // this.firstName = firstName
+//   // this.lastName = lastName
+//   // this.age = age
+//   // }
+
+//   // constructor (personData) {
+//   //   this.firstName = personaData.firstName
+//   //   this.lastName = personData.lastName
+//   //   this.age = personData.age
+//   //   }
+
+// // constructor ({firstName, lastName, age}) {
+// //     this.firstName = firstName
+// //     this.lastName = lastName
+// //     this.age = age
+// //     }
+
+
   
-  const person = {
-    firstName:'pedro',
-    lastName: 'almodovar', 
-    age:55,
-    printUserInfo(){
-      console.log(`Hello ${this.firstName} ${this.lastName} of age ${this.age}`)
-    },
-      printSomething(callback) {
-      callback()
-      },
-
-      helpers:{
-        helperVar: "testin variable",
-        helperFunc: function() {
-        console.log(this.helperVar)
-        }
-      }
-  }
-
-  class Person {
-    firstName = ''
-    lastName = ''
-    age
-
-  helpers = {
-    helperVar: "testin variable",
-      helperFunc: function() {
-        console.log(this.helperVar)
-      }
-  }
-
-  /***************************************Diferentes maneras de escribir lo mismo */
-  // constructor (firstName,lastName, age=0){
-  // this.firstName = firstName
-  // this.lastName = lastName
-  // this.age = age
-  // }
-
-  // constructor (personData) {
-  //   this.firstName = personaData.firstName
-  //   this.lastName = personData.lastName
-  //   this.age = personData.age
-  //   }
-
-// constructor ({firstName, lastName, age}) {
+//   constructor(personData) {
+//     const { firstName, lastName, age = 100 } = personData
 //     this.firstName = firstName
 //     this.lastName = lastName
 //     this.age = age
+//   }
+//   printUserInfo() {
+//     console.log(`Hello ${this.firstName} ${this.lastName} of age: ${this.age}`)
+//   }
+//   printSomething(callback) {
+//     callback()
+//   }
 //     }
 
-constructor (personData) {
-  const {firstName, lastName, age = 100} = personData
-  }
-
-
-  printUserInfo(){ 
-  console.log(`Hello ${this.firstName} ${this.lastName} of age ${this.age}`)
-  }
-
-  printSomething(callback){
-    callback ()
+    /****************************ARROW FUNCTION ********/
+    function displayGreeting(greeting){
+      return `${greeting} Carol`
     }
- 
+    const displayGreeting2 = greeting => `${greeting} Carol`/// cuando es un solo parametro le sacamos los ()
+  
+      console.log(displayGreeting('Hello'));
+      console.log(displayGreeting2('Hola'));
+   
 
-  }
- 
-  // const person1 =new Person ('Philip', 'Jerga', 28)
-  // person1.printUserInfo()
 
-  // const person2 = new Person ('Peter', 'Green', 44)
-  // person1.printUserInfo()
 
-  const person1 =new Person ({
-    firstName:'Philip',
-    lastName: 'Jerga', 
-    })
-  person1.printUserInfo()
-  const person2 =new Person ({
-    firstName:'Juan',
-    lastName: 'Palote', 
-    age:34})
-  person2.printUserInfo()
+    // const person1 = new Person ({
+    //   firstName:'Philip',
+    //   lastName: 'Jerga', 
+    //   })
+    // person1.printUserInfo()
+
+    // const person2 =new Person ({
+    //   firstName:'Juan',
+    //   lastName: 'Palote', 
+    //   age:34})
+    // person2.printUserInfo()
+   
 
 
 }
